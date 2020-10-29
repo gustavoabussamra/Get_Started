@@ -10,107 +10,180 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
- * Classe que representa a tabela ROLE
- * @generated
- */
+* Classe que representa a tabela ROLE
+* @generated
+*/
 @Entity
-@IdClass(RolePK.class)
 @Table(name = "\"ROLE\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Role")
 public class Role implements Serializable {
 
-  /**
-   * UID da classe, necessário na serialização
-   * @generated
-   */
-  private static final long serialVersionUID = 1L;
+    /**
+    * UID da classe, necessário na serialização
+    * @generated
+    */
+    private static final long serialVersionUID = 1L;
 
-  /**
-   * @generated
-   */
-  @Id
-  @Column(name = "id", nullable = false, insertable=true, updatable=true)
-  private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+    /**
+    * @generated
+    */
+    @Id
+    @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
+        private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
-  /**
-   * @generated
-   */
-  @Id
-  @JoinColumn(name="fk_user", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
-  private User user;
+    /**
+    * @generated
+    */
+    @Column(name = "builtin", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Boolean builtIn = false;
 
-  /**
-   * Construtor
-   * @generated
-   */
-  public Role(){
-  }
+    /**
+    * @generated
+    */
+    @Column(name = "membership_enabled", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Boolean membershipEnabled = true;
 
+    /**
+    * @generated
+    */
+    @Column(name = "name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
+        
+        private java.lang.String name;
 
-  /**
-   * Obtém id
-   * return id
-   * @generated
-   */
-  
-  public java.lang.String getId(){
-    return this.id;
-  }
+    /**
+    * @generated
+    */
+    @Column(name = "normalized_name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
+        
+        private java.lang.String normalizedName = "";
 
-  /**
-   * Define id
-   * @param id id
-   * @generated
-   */
-  public Role setId(java.lang.String id){
-    this.id = id;
-    return this;
-  }
+    /**
+    * Construtor
+    * @generated
+    */
+    public Role(){
+    }
 
-  /**
-   * Obtém user
-   * return user
-   * @generated
-   */
-  
-  public User getUser(){
-    return this.user;
-  }
+    /**
+    * Obtém id
+    * return id
+    * @generated
+    */
+    
+    public java.lang.String getId(){
+        return this.id;
+    }
 
-  /**
-   * Define user
-   * @param user user
-   * @generated
-   */
-  public Role setUser(User user){
-    this.user = user;
-    return this;
-  }
+    /**
+    * Define id
+    * @param id id
+    * @generated
+    */
+    public Role setId(java.lang.String id){
+        this.id = id;
+        return this;
+    }
+    /**
+    * Obtém builtIn
+    * return builtIn
+    * @generated
+    */
+    
+    public java.lang.Boolean getBuiltIn(){
+        return this.builtIn;
+    }
 
-  /**
-   * @generated
-   */
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) return true;
-    if (obj == null || getClass() != obj.getClass()) return false;
-    Role object = (Role)obj;
-    if (id != null ? !id.equals(object.id) : object.id != null) return false;
-    if (user != null ? !user.equals(object.user) : object.user != null) return false;
-    return true;
-  }
+    /**
+    * Define builtIn
+    * @param builtIn builtIn
+    * @generated
+    */
+    public Role setBuiltIn(java.lang.Boolean builtIn){
+        this.builtIn = builtIn;
+        return this;
+    }
+    /**
+    * Obtém membershipEnabled
+    * return membershipEnabled
+    * @generated
+    */
+    
+    public java.lang.Boolean getMembershipEnabled(){
+        return this.membershipEnabled;
+    }
 
-  /**
-   * @generated
-   */
-  @Override
-  public int hashCode() {
-    int result = 1;
-    result = 31 * result + ((id == null) ? 0 : id.hashCode());
-    result = 31 * result + ((user == null) ? 0 : user.hashCode());
-    return result;
-  }
+    /**
+    * Define membershipEnabled
+    * @param membershipEnabled membershipEnabled
+    * @generated
+    */
+    public Role setMembershipEnabled(java.lang.Boolean membershipEnabled){
+        this.membershipEnabled = membershipEnabled;
+        return this;
+    }
+    /**
+    * Obtém name
+    * return name
+    * @generated
+    */
+    
+    public java.lang.String getName(){
+        return this.name;
+    }
+
+    /**
+    * Define name
+    * @param name name
+    * @generated
+    */
+    public Role setName(java.lang.String name){
+        this.name = name;
+        return this;
+    }
+    /**
+    * Obtém normalizedName
+    * return normalizedName
+    * @generated
+    */
+    
+    public java.lang.String getNormalizedName(){
+        return this.normalizedName;
+    }
+
+    /**
+    * Define normalizedName
+    * @param normalizedName normalizedName
+    * @generated
+    */
+    public Role setNormalizedName(java.lang.String normalizedName){
+        this.normalizedName = normalizedName;
+        return this;
+    }
+
+    /**
+    * @generated
+    */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+Role object = (Role)obj;
+        if (id != null ? !id.equals(object.id) : object.id != null) return false;
+        return true;
+    }
+
+    /**
+    * @generated
+    */
+    @Override
+    public int hashCode() {
+        int result = 1;
+        result = 31 * result + ((id == null) ? 0 : id.hashCode());
+        return result;
+    }
 
 }

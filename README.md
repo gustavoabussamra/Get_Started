@@ -1,17 +1,14 @@
 # Introdução
 
-Esta é uma aplicação criada com o CronApp IDE.
-Esta aplicação foi criada para o tutorial Get Started usando o CronApp IDE e pode ser acompanhado através do endereço: https://docs.cronapp.io/display/CRON2/Get+Started
-
-Projeto de um pequeno sistema de reserva de livro para uma biblioteca.
+Esta é uma aplicação criada com o Cronapp IDE (v. 2.6.15) e é parte do Tutorial [Get Started](https://docs.cronapp.io/display/CRON2/Get+Started).
 
 ## Pré-Requisitos
 
-1. CronApp IDE
+1. Cronapp IDE
 
-## Como rodar com o CronApp
+## Como rodar com o Cronapp
 
-1. Crie um projeto do tipo Mobile na categoria Low-Code no CronApp IDE (www.cronapp.io)
+1. Crie um projeto do tipo Mobile na categoria Low-Code no Cronapp IDE (www.cronapp.io)
 2. Digite o nome desejado para o projeto e escolha que o projeto está em um controle de versão
 3. Clique em Finalizar
 4. Aguarde a preparação do ambiente
@@ -24,4 +21,4 @@ Projeto de um pequeno sistema de reserva de livro para uma biblioteca.
 
 ## Referências
 
-[CronApp IDE](http://www.cronapp.io/)
+[Cronapp IDE](http://www.cronapp.io/)

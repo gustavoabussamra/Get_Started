@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><Context>
-    <Resource accessToUnderlyingConnectionAllowed="true" driverClassName="org.h2.Driver" logAbandoned="true" name="jdbc/main" password="root" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:h2:file:~/9eac94e391d042df8f95ec93e988bd92;DATABASE_TO_UPPER=false;ALIAS_COLUMN_NAME=true;AUTO_SERVER=TRUE" username="root"/>
+    <Resource accessToUnderlyingConnectionAllowed="true" driverClassName="org.h2.Driver" logAbandoned="true" name="jdbc/main" password="root" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:h2:file:~/fb423c3843b949c0ab107dd2466d8958;DATABASE_TO_UPPER=false;ALIAS_COLUMN_NAME=true;AUTO_SERVER=TRUE" username="root"/>
     <Profile value="DEV"/>
+    <Profile value="PROD"/>
 </Context>
