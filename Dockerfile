@@ -1,6 +1,6 @@
-FROM alpine:3.12.0 as maven_builder
+FROM ubuntu:18.04 as maven_builder
+RUN apt update && apt install -y maven openjdk-11-jdk npm git bash
 WORKDIR /app
-ADD . /app
 RUN apk add --no-cache --update-cache maven openjdk11 && mvn dependency:go-offline -B
 ENV TIER DEV
 ENV CONTEXT_USE true
