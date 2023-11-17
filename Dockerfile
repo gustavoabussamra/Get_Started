@@ -15,7 +15,7 @@ ARG MOBILE_APP
 ## Usando repositórios externo - JAR e NPM
 RUN mvn dependency:go-offline -B
 ADD . /app
-RUN cd /app && mvn package -X -Dcronapp.profile=DEV -Dcronapp.useContext=TRUE} -Dcronapp.mobileapp=FALSE
+RUN cd /app && mvn package -X -Dcronapp.profile=DEV -Dcronapp.useContext=TRUE -Dcronapp.mobileapp=FALSE
  
 ## Usando repositórios interno - JAR e NPM
 #ADD settings.xml  $HOME/.m2/settings.xml
