@@ -15,13 +15,13 @@ ARG MOBILE_APP
 ## Usando repositórios externo - JAR e NPM
 RUN mvn dependency:go-offline -B
 ADD . /app
-RUN cd /app && mvn package -X -Dcronapp.profile=${TIER} -Dcronapp.useContext=${CONTEXT_USE} -Dcronapp.mobileapp=${MOBILE_APP}
+RUN cd /app && mvn package -X -Dcronapp.profile=DEV -Dcronapp.useContext=TRUE} -Dcronapp.mobileapp=FALSE
  
 ## Usando repositórios interno - JAR e NPM
 #ADD settings.xml  $HOME/.m2/settings.xml
 #RUN npm config set registry https://my.registry.com/your-repository/name && mvn -s /app/settings.xml dependency:go-offline -B
 #ADD . /app
-#RUN cd /app && mvn -s /app/settings.xml package -X -Dcronapp.profile=${TIER} -Dcronapp.useContext=${CONTEXT_USE} -Dcronapp.mobileapp=${MOBILE_APP}
+#RUN cd /app && mvn -s /app/settings.xml package -X -Dcronapp.profile=PRD -Dcronapp.useContext=true -Dcronapp.mobileapp=false
  
 FROM tomcat:9.0.17-jre11
 RUN rm -rf /usr/local/tomcat/webapps/* && groupadd tomcat && useradd -s /bin/false -M -d /usr/local/tomcat -g tomcat tomcat
